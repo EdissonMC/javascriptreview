@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../_CS472_WEB_PROGRAMMING"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DAY1"
+	}
+}

@@ -1,0 +1,35 @@
+
+
+.BlueColor{
+    background-color: rgb(103, 103, 227);
+}
+
+/* 
+Esto es lo ultimo que ve el navegador 
+y aplica el color en este orden
+ */
+.GreenColor{
+    background-color: rgb(64, 219, 87);
+}
+
+p.yellowColor{
+    background-color: rgb(255, 250, 92);
+}
+
+.myh2s
+{
+    background-color: brown;
+}
+
+
+.SizeParrafo{
+    font-size: larger;
+}
+
+aside { color: gray; }
+p { color: green; }
+em { color: yellow; }
+.awesome { color: blue; }
+em.awesome { color: red; }
+#recent { color: black; }
+em#recent.awesome { color: orange; }

@@ -1,0 +1,30 @@
+
+body{
+
+}
+
+body{
+    font-size: 15px;
+}
+
+p,h1{
+    background-color: green;
+}
+
+h1{
+    background-color: red;
+}
+ul{
+    /* list-style-type: circle; */
+    /* list-style-type: lower-roman; */
+}
+
+#lista1{
+    
+    list-style-type: lower-roman;
+}
+
+#lista2{
+ 
+    list-style-type: circle;
+}

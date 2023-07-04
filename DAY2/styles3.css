@@ -1,0 +1,66 @@
+
+/*
+* Setea un background sin repeticion
+* y con una posicion inicial
+*/
+/* body{
+    background-image: url("https://picsum.photos/200");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+} */
+
+/*
+* Setea un background con repeticion vertical
+* y con una posicion inicial
+*/
+
+/* body{
+    background-image: url("https://picsum.photos/200");
+    background-repeat: repeat-y;
+    background-position: 10px 10px;
+} */
+
+
+/*
+* Setea un background con repeticion horizontal
+* y con una posicion inicial
+*/
+
+/* body{
+    background-image: url("https://picsum.photos/200");
+    background-repeat: repeat-x;
+    background-position: 10px 10px;
+} */
+
+
+
+/* body{
+    background-image: url("/imageninerna");
+    background-repeat: repeat-x;
+    background-position: 10px 10px;
+} */
+
+
+/*
+ ESPACIADO DE PALABRAS
+*/
+p{
+    word-spacing: 10px;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2{
+    text-align: left;
+    text-shadow: -5px 1px green;
+}
+
+h3{
+    text-align: right;
+}
+h4{
+    text-indent: 50px;
+}
