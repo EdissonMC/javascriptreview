@@ -8,8 +8,30 @@
 </head>
 <body>
     <form action="next.html">
-        <input type="text" pattern="">
+        <!-- EXAMPLE 1 -->
+        <!-- A dot . matches exactly one-character except a \n line break .oo.y matches "Doocy", "goofy", "LooNy", ... -->
+        <!-- <input type="text" pattern=".oo."> -->
+
+       <!-- EXAMPLE 2 -->
+        <!-- this simbol | means OR
+        so for this exmples will match -->
+        <!-- hello|hi matches "hello" or "hi"  -->
+        <!-- <input type="text" pattern="hello|hi"> -->
+       
+
+          <!-- EXAMPLE 3 -->
+        <!-- this simbol | means OR
+        so for this exmples will match 
+        hello|hi matches "hello" or "hi" -->
+        <input type="text" pattern="(hello|hi) world">
+       
+       
+       
+       
         <input type="submit">
+
+
+
     </form>
 </body>
 </html>
