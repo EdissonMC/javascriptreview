@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="regular1.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <form action="next.html">
+        <!-- <hr/> -->
         <!-- EXAMPLE 1 -->
-        <!-- A dot . matches exactly one-character except a \n line break .oo.y matches "Doocy", "goofy", "LooNy", ... -->
+        <!-- A dot . matches exactly one-character except a \n line break 
+            .oo.y matches "Doocy", "goofy", "LooNy", ... -->
         <!-- <input type="text" pattern=".oo."> -->
         <!-- <input type="submit"> -->
 
 
-       <!-- EXAMPLE 2 -->
+        <!-- EXAMPLE 2 |means OR -->
+        <!-- <hr/> -->
         <!-- this simbol | means OR
         so for this exmples will match -->
         <!-- hello|hi matches "hello" or "hi"  -->
@@ -22,22 +27,205 @@
         <!-- <input type="submit"> -->
 
 
-        <!-- EXAMPLE 3 -->
+
+
+        <!-- EXAMPLE 3 () are for grouping -->
+        <!-- <hr/> -->
         <!-- this symbol | means OR
         so for this exmples will match 
         hello|hi matches "hello" or "hi" -->
         <!-- <input type="text" pattern="(hello|hi) world"> -->
+        <!-- <input type="text" pattern="(hello|hi) (world|city)">
+        <input type="submit"> -->
+
+
+
+
+        <!-- EXAMPLE 4 \escape sequence -->
+        <!-- <hr/> -->
+        <!-- this symbol \ help to escape special characters -->
+        <!-- many characters must be escaped to match them literally -->
+        <!-- For .com we need to scape the point before 'com' -->
+        <!-- <input type="text" pattern="\.com"> -->
+
+        <!-- For next example we use point again and we need to scape again -->
+        <!-- <input type="text" pattern="123\.123\.123"> -->
+
+        <!-- For next example we need to scape the symbol ('$') and also for the point('.') -->
+        <!-- <input type="text" pattern="\$000\.00"> -->
         <!-- <input type="submit"> -->
 
 
-        <!-- EXAMPLE 4 -->
-        <!-- this symbol \ help to escape special characters -->
-        <!-- many characters must be escaped to match them literally -->
-        <input type="text" pattern="\.com">
-        <input type="submit">
 
 
+        <!-- EXAMPLE 5 Quantifier: * -->
+        <!-- this symbol * means 0 or more occurrences for last character-->
+        <!-- Next example will matches "ab", "abc", "abcc", "abccc", ... -->
+        <!-- <hr/> -->
+        <!-- <label for="">will matches "ab", "abc", "abcc", "abccc", ...</label>
+        <input type="text" pattern="abc*"> -->
+        <!-- Next example will matches "a", "abc", "abcbc", "abcbcbc", ... -->
+        <!-- <label for="">matches "a", "abc", "abcbc"...</label>
+        <input type="text" pattern="a(bc)*"> -->
+
+        <!-- <label for="">matches 1[2...]3[4...] </label> -->
+        <!-- <input type="text" pattern="12*34*"> -->
+
+        <!-- <label for="">matches [pa...][pu...] </label> -->
+        <!-- <input type="text" pattern="(pa)*(pu)*"> -->
+
+        <!-- <label for="">matches p[wherever]p </label> -->
+        <!-- <input type="text" pattern="p.*p"> -->
+        <!-- <input type="submit"> -->
+
+
+
+
+
+
+
+        <!-- EXAMPLE 5 Quantifier: + -->
+        <!-- this symbol + means 1 or more occurrences for last character-->
+        <!-- <label for="">matches p[a...] </label> -->
+        <!-- <input type="text" pattern="pa+"> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for="">matches go[o...]gle </label> -->
+        <!-- <input type="text" pattern="goo+gle"> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for="">matches a[bc...repet] </label> -->
+        <!-- <input type="text" pattern="a(bc)+"> -->
+        <!-- <input type="submit"> -->
+
+
+
+
+
+        <!-- EXAMPLE 6 Quantifier: ? -->
+        <!-- this symbol ? means 0 or 1 occurrences -->
+        <!-- <label for="">matches pancho or panch </label> -->
+        <!-- <input type="text" pattern="panch?"> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for="">matches panch[wherever letter] </label> -->
+        <!-- <input type="text" pattern="panch.?"> -->
+        <!-- <input type="submit"> -->
+
+
+
+
+        <!-- EXAMPLE 7 Quantifier: min -->
+        <!-- {min,max} means between min and max occurrences (inclusive) -->
+        <!-- <label for="">matches pancho panchoo or panchooo </label> -->
+        <!-- <input type="text" pattern="pancho{1,3}"> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for="">matches pancho panchoo or panchooo </label> -->
+        <!-- <input type="text" pattern="pancho{1,3}"> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for="">matches panchoo </label> -->
+        <!-- <input type="text" pattern="pancho{2}"> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for="">matches pancho4 pancho4 pancho444 pancho444 </label> -->
+        <!-- <input type="text" pattern="pancho4{1,4}"> -->
+        <!-- <input type="submit"> -->
+
+
+        <!-- EXAMPLE 8 Anchors: ^  -->
+        <!-- this symbol ^ represents the beginning of the string or line; -->
+
+        <!-- <label for="">matches everything start with p </label> -->
+        <!-- <input type="text" pattern="^p.*"> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for="">matches everything start with "mo" </label> -->
+        <!-- <input type="text" pattern="^mo.{1,}"> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches everything end with "o" </label> -->
+        <!-- <input type="text" pattern=".*o$" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches everything start with "a" end with "o" </label> -->
+        <!-- <input type="text" pattern="^a.*o$" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches everything start with "a" end with "o" </label> -->
+        <!-- <input type="text" pattern="^a[a-z]*o$" required> -->
+        <!-- <input type="submit"> -->
+
+
+
+         <!-- EXAMPLE 9 Anchors: ^  -->
+        <!-- this symbol [] represent a group characters into a character set,  -->
+        <!-- will match any single -->
+
+        <!-- <label for=""> matches strings like "bart", "cart", and "dart"</label>
+        <input type="text" pattern="[bcd]art" required>
+        <input type="submit"> -->
+
+        <!-- <label for=""> matches "what", "what!", "what?**!","what??!"</label> -->
+        <!-- <input type="text" pattern="what[!*?]*" required> -->
+        <!-- <input type="submit"> -->
+
+
+        <!-- <label for=""> matches DNA string</label> -->
+        <!-- <input type="text" pattern="[ACGT]+" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches any lowercase letter </label> -->
+        <!-- <input type="text" pattern="[a-z]*" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches any lowercase letter </label> -->
+        <!-- <input type="text" pattern="[a-zA-Z0-9]*" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches any character diferent than a, b, c </label> -->
+        <!-- <input type="text" pattern="[^abc]*" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches any character diferent than a, b, c </label> -->
+        <!-- <input type="text" pattern="[+\-]{1,1}[0-9]+" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches any character diferent than a, b, c </label> -->
+        <!-- <input type="text" pattern="[+\-]{1,1}[0-9]+" required> -->
+        <!-- <input type="submit"> -->
+
+
+        <!-- <label for=""> matches any character grades:  </label> -->
+        <!-- <input type="text" pattern="[+\-]{1,1}[ABCDF]{1,1}" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> matches any digit (same as[0-9]):  </label> -->
+        <!-- <input type="text" pattern="\d*" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> Match any non digit ([^0-9]):  </label> -->
+        <!-- <input type="text" pattern="\D*" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> Matches any word character (same as[a-zA-Z_0-9]):  </label> -->
+        <!-- <input type="text" pattern="\w*" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> Matches any non word character  :  </label> -->
+        <!-- <input type="text" pattern="\W*" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> Matches any white space character ,\t,\n, etc :  </label> -->
+        <!-- <input type="text" pattern="\s*" required> -->
+        <!-- <input type="submit"> -->
+
+        <!-- <label for=""> Matches any white non-whitespace :  </label> -->
+        <!-- <input type="text" pattern="\S*" required> -->
+        <!-- <input type="submit"> -->
 
     </form>
 </body>
+
 </html>
